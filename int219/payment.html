@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+<title>Payment form </title>
+	
+<link rel="stylesheet" href="css/pay.css">
+
+<script>
+function login()
+	{
+		
+                var pwd=document.getElementById("card").value;
+                var uname = document.getElementById("name").value;
+		var mh = document.getElementById("mon").value;
+		if(pwd =='')
+		{
+			alert("please enter card number");
+		}
+               else if(pwd.length < 16 || pwd.length > 16)
+		{
+			alert("Card number is not valid");
+		}
+		else if(uname=='')
+		{
+        	alert("enter the name");
+		}
+            else if(mh==' ')
+                 {
+        alert("enter expiry month");
+                 }
+             else if(cvb==' ')
+                 {
+          alert("enter expiry month");
+		}
+		else
+		{
+	  alert('Payment Done successfull');
+               }
+	}
+</script>
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  
+<div class="checkout_wrapper">
+    
+<div class="product_info">
+     
+   <img src="images/bn.jpg" alt="product">
+ 
+   <div class="content">
+       
+ <h3>Book your tickets now</h3>
+       
+       
+</div>
+    
+</div>
+    
+<div class="checkout_form">
+      
+<p>Payment Section</p>
+      
+<div class="details">
+       
+ <div class="section">
+        
+  <input type="text" placeholder="Card Number" id="card">
+      
+  </div>
+       
+ <div class="section">
+         
+ <input type="text" placeholder="Cardholder Name" id="name">
+      
+  </div>
+        
+<div class="section last_section">
+        
+  <div class="item">
+            
+<input type="text" placeholder="Expiry Date" id="mon">
+        
+  </div>
+        
+  <div class="item">
+           
+ <input type="text" placeholder="CVV" id="cvb">
+         
+ </div>
+        
+</div>
+        
+       
+ <div class="btn" onclick="login()">
+       
+   <a href="#">Pay</a>
+      
+  </div>
+ 
+ <div class="btn" >
+       
+   <a href="index.html">Back</a>
+      
+  </div>
+           
+</div>
+  
+  </div>
+  
+</div>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/h1.css">
+  
+
+<script>
+ function login()
+	{
+		var uname = document.getElementById("username").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else
+		{
+	  alert('Thank You for Login');
+ window.location = "index.html";
+               }
+	}
+</script>
+</head>
+<body>
+ <div class="cont">
+<img src="images/bms2.png" align="right" class="img">
+    <div class="form sign-in">
+      <h2>Sign In</h2>
+      <label>
+        <span>Email Id</span>
+        <input type="email" name="email" id="username">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" id="pwd1">
+      </label>
+      <button class="submit" type="button" onclick="login()">Sign In</button>
+       <button class="submit" type="button"><a href="create.html">Create Account</a></button>
+ <p class="forgot-pass">Forgot Password ?</p>
+
+      <div class="social-media">
+        <ul>
+          <li><img src="images/facebook.png"></li>
+          <li><img src="images/twitter.png"></li>
+          <li><img src="images/linkedin.png"></li>
+          <li><img src="images/instagram.png"></li>
+        </ul>
+      </div>
+    </div>
+</form>
+</body>
+</html>
